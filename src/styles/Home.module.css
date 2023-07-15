@@ -1,0 +1,231 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* min-height: 100vh; */
+  background-image: url(/home2.png);
+  background-repeat: no-repeat !important;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 415px;
+}
+
+.imageCOl {
+  background-image: url(/portrait-women.jpg);
+  min-height: 650px;
+  color: #1f1e1e;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.imageColData {
+  background-color: #f4f2f0;
+  padding: 50px;
+  min-height: 650px;
+  border-radius: 20px;
+}
+
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.hero h1 {
+  margin: 30px 0px;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.sectionDark {
+  background-color: #f4f2f0;
+  padding: 50px;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.paddingLeft {
+  padding-left: 50px;
+}
+
+.sectionStaff {
+  /* background:#f4f2f0; */
+  padding: 200px 0px;
+}
+
+.videoSection {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(174deg, rgba(255, 255, 255, 1) 50%, rgba(244, 242, 240, 1) 50%);
+  padding-bottom: 50px;
+}
+
+.finalSection {
+  padding: 100px 0px;
+  background: rgba(244, 242, 240, 1);
+}
+
+.footer {
+  padding-top: 100px;
+  background: #151120;
+  padding-bottom: 20px;
+}
+
+.footerSocialIcons {
+  color: white;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.halfone {
+  /* margin: 20px; */
+  padding: 50px;
+  background: white;
+  border-radius: 20px;
+  min-height: 380px;
+  box-shadow: 0px 5px 22px 2px rgb(93 93 93 / 17%);
+}
+
+.halftwo {
+  /* margin: 20px; */
+  padding: 50px;
+  background: #81559b;
+  color: white;
+  min-height: 380px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 22px 2px rgb(93 93 93 / 17%);
+}
+
+.StaffCard {
+
+  padding: 20px;
+  margin: 30px;
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.iconStaff {
+  position: absolute;
+  right: 25px;
+  color: #bfbfbf;
+}
+
+.staffImage {
+
+  width: 100px;
+  height: 100px; /* Make sure the height equals the width for a perfect circle */
+  border-radius: 50%; /* 50% is usually used to create a perfect circle */
+  text-align: center;
+  margin: 30px;
+  object-fit: cover;
+  /* width: 100px;
+  border-radius: 100%;
+  text-align: center;
+  margin: 30px;
+  object-fit:fill; */
+}
+
+.workreel {
+
+  /* width: 100px;
+  height: 100px; 
+  border-radius: 50%; 
+  text-align: center;
+  margin: 30px;
+  object-fit: cover; */
+  width: 118px;
+  height: 80px;
+  border-radius: 6%;
+  text-align: center;
+  margin: 20px;
+  object-fit:cover;
+}
+
+
+.blogSection{
+  background: #f4f2f0;
+  padding: 50px 0px;
+}
+.blogPost{
+  margin: 10px;
+  background: white;
+  border-radius: 150px;
+  min-height: 250px;
+  border: none;
+  box-shadow: 0px 5px 22px 2px rgb(93 93 93 / 17%);
+  justify-content: center;
+}
+.faqSection{
+  padding:100px 0px;
+}
+.blogImage{
+  height: 100%;
+  min-height: 250px;
+  background-size: cover;
+  background-position-x: center;
+}
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero h1 {
+    margin: 30px 0px;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .paddingLeft {
+    padding-left: 0px;
+  }
+
+  .hero {
+    margin-top: 0px;
+    margin-bottom: 65px;
+  }
+
+  .main {
+    background-image: none;
+    max-height: 400px;
+  }
+
+  .imageCOl {
+    min-height: 400px;
+  }
+
+  .sectionStaff {
+    padding: 50px 0px;
+  }
+
+  .videoIframe {
+    max-height: 300px;
+  }
+
+  .halfone {
+    margin-bottom: 20px;
+  }
+
+  .mobileCenter {
+    text-align: center !important;
+  }
+  .videoSection{
+    padding-top: 30px;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {}
+

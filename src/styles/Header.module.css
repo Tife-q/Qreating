@@ -1,0 +1,138 @@
+.splash_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    height: 100vh;
+    flex-direction: column;
+    width: 100%;
+    z-index: 99999;
+    position: absolute;
+    background-color: white;
+}
+
+/* :::::::::::::: Required CSS */
+/* Locked */
+.splash_lock {
+    width: 24px;
+    height: 21px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.splash_lock:after {
+    content: "";
+    display: block;
+    background: #000;
+    width: 3px;
+    height: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3.5px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.splash_lock:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    bottom: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    border: 3px solid #000;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom: 0;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+/* Locked Hover */
+.splash_lock:hover:before {
+    height: 12px;
+}
+
+/* Unlocked */
+.splash_unlocked {
+    transform: rotate(10deg);
+}
+
+.splash_unlocked:before {
+    bottom: 125%;
+    left: 31%;
+    margin-left: -11.5px;
+    transform: rotate(-45deg);
+}
+
+.logo {
+    max-width: 200px;
+}
+
+.rownavbar {
+    min-height: 100px;
+    align-items: center;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 5px 20px -4px rgb(127 127 127 / 20%);
+}
+
+.ctaButtons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.splash_unlocked,
+.splash_unlocked:before {
+    border-color: #81559b;
+}
+
+.splash_unlocked:after {
+    background: #81559b;
+}
+
+/* Unlocked Hover */
+.splash_unlocked:hover {
+    transform: rotate(3deg);
+}
+
+.splash_unlocked:hover:before {
+    height: 10px;
+    left: 40%;
+    bottom: 124%;
+    transform: rotate(-30deg);
+}
+
+@media (max-width: 700px) {
+    .ctaButtons {
+        display: none;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .mobileMenu {
+        display: block;
+        text-align: right;
+    }
+
+}
