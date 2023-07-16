@@ -2,23 +2,23 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Splash from '@/components/Splash'
-import Header from '@/components/header'
 import { Row, Col, Container, Button, Card } from 'react-bootstrap'
-import { FaDesktop, FaGlobe, FaHandshake, FaInstagram, FaLink, FaLinkedinIn, FaPencilAlt, FaPhotoVideo, FaTwitter, FaUnlockAlt, FaUserTie, FaUsers, FaVideo, FaYoutube } from "react-icons/fa";
+import { FaDesktop, FaGlobe, FaHandshake, FaLink, FaPencilAlt, FaPhotoVideo, FaUnlockAlt, FaUserTie, FaUsers, FaVideo } from "react-icons/fa";
 import Slider from "react-slick";
 import Link from 'next/link'
 import Accordion from 'react-bootstrap/Accordion';
+import Layout from '@/layout/normal'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+function Home() {
   let settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    autplay: true,
+    autoplay: true,
     slidesToScroll: 1,
     responsive: [
       {
@@ -48,7 +48,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Splash />
-      <Header />
       <main className={`${inter.className}`}>
         <Container className={`${styles.main}`}>
           <section className={`${styles.hero}`}>
@@ -64,13 +63,14 @@ export default function Home() {
         </Container>
 
         <Container>
-          {/* <section className={`${styles.sectionDark}`}>
+          <section className={`${styles.sectionDark}`}>
             <Row >
-              <Col xs={12} sm={3}>
+              <Col xs={12} sm={12} md={12} lg={3}>
                 <h1 style={{ fontSize: '52px', fontWeight: 800 }}>What is Qreating?</h1>
               </Col>
-              <Col xs={12} sm={9} className={styles.paddingLeft}>
-                <p>Qreating is a digital hub connecting writers with top industry experts for personalized or group coaching via live video sessions. We currently cater to screenwriters, songwriters, journalists, playwrights, and creative writers.</p>
+              <Col xs={12} sm={12} md={12} lg={9} className={styles.paddingLeft}>
+                <p>Its a marketplace where writers can connect with indsutry professionals for coaching through live video 1:1 or group sessions.
+                  The type of writers/professionals are Screenwriters, Songwriters, Journalists, playwrights, & creative writers at the moment.</p>
                 <Row>
                   <Col xs={12} sm={6}>
                     <Card className='iconbox-card'>
@@ -99,37 +99,31 @@ export default function Home() {
                 </Row>
               </Col>
             </Row>
-          </section> */}
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          
+          </section>
           <section>
             <Row style={{ alignItems: "start" }}>
-              <Col xs={12} sm={4}>
+              <Col xs={12} sm={12} md={12} lg={4}>
                 <div className={styles.imageCOl}>
 
                 </div>
                 <p></p>
               </Col>
-              <Col xs={12} sm={8} >
+              <Col xs={12} sm={12} md={12} lg={8} >
                 <div className={styles.imageColData}>
                   <Row >
-                    <Col xs={12} sm={6}>
+                    <Col xs={12} sm={12} md={12} lg={6}>
 
                       <h1><b>How it Works</b></h1>
-                      {/* <p>Unlocking Creativity, One Door At A Time</p> */}
+                      <p>Unlocking Creativity, One Door At A Time</p>
                       <br />
                       <Link href="https://www.qreating.io/discover-coaches"><Button className='button1'>Find a Coach</Button></Link>
                       <br /><br />
                     </Col>
-                    <Col xs={12} sm={6}>
+                    <Col xs={12} sm={12} md={12} lg={6}>
                       <div>
                         <FaGlobe className='icon-howitworks' />
                         <b><h3>Discover</h3></b>
-                        <p>Discover Top Industry Professionals - Writers, Journalists, Filmmakers, and More - on Qreating.</p>
+                        <p>Discover Top Industry Professionals - Writers, Journalists, Filmmakers, and More - on Qreating!</p>
                       </div>
                       <br />
                       <br />
@@ -143,7 +137,7 @@ export default function Home() {
                       <div>
                         <FaUserTie className='icon-howitworks' />
                         <b><h3>Elevate</h3></b>
-                        <p>Unlock Your Potential with Personalised Coaching - Gain Perspectives, Learn Skills, Achieve Goals with Confidence.</p>
+                        <p>Unlock Your Potential with Personalised Coaching - Gain Perspectives, Learn Skills, Achieve Goals with Confidence</p>
                       </div>
                     </Col>
                   </Row>
@@ -154,126 +148,51 @@ export default function Home() {
         </Container>
         <section className={styles.sectionStaff}>
           <Container>
-            <center><h1 style={{ fontWeight: 600 }}>  Elevate your writing potential with our coaches</h1></center>
+            <center><h1 style={{ fontWeight: 600 }}>Choose from one of our world-class coaches</h1></center>
             <br />
             <Slider {...settings}>
               <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=rodrigo-nogueira' target="_blank">
                 <Card className={styles.StaffCard}>
                   <FaPencilAlt className={styles.iconStaff} />
-                  <img src="/rodrigo.png" alt='' className={styles.staffImage} />
-                  <h5>Rodrigo Nogueira </h5>
-                  <p>Screenwriter</p>
-                  <p>working on an animation for Disney</p>
-                  <img src="/disney.jpg" alt='' className={styles.workreel} />
+                  <img src="/damien.jpg" alt='' className={styles.staffImage} />
+                  <h5>Derek Uskert</h5>
+                  <p>Editor & Passionate Storyteller</p>
                 </Card>
-                </a>
               </div>
               <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=jasmine-mcglade' target='_blank'>
                 <Card className={styles.StaffCard}>
                   <FaPencilAlt className={styles.iconStaff} />
-                  <img src="/jasmine.png" alt='' className={styles.staffImage} />
-                  <h5>Jasmine McGlade</h5>
+                  <img src="/damien.jpg" alt='' className={styles.staffImage} />
+                  <h5>Ashley Simpo</h5>
                   <p>Writer, Editor and Author.</p>
-                  <p>Working on Fencer starring Nicholas Hault, Kiki Layne</p>
-                  <img src="/lala.jpg" alt='' className={styles.workreel} />
                 </Card>
-                </a>
               </div>
               <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=des-yankson' target='_blank'>
                 <Card className={styles.StaffCard}>
                   <FaVideo className={styles.iconStaff} />
-                  <img src="/des.jpeg" alt='' className={styles.staffImage} />
-                  <h5>Des Yankson </h5>
-                  <p>Actor. Writer. Voice Artist</p>
-                  <p>Actor turned writer, crafting for theatre, TV, film, and you.</p>
-                  <img src="/breeders.jpg" alt='' className={styles.workreel} />
+                  <img src="/damien.jpg" alt='' className={styles.staffImage} />
+                  <h5>Jasmine McGlade</h5>
+                  <p>Screenwriter and award-winning director</p>
                 </Card>
-                </a>
               </div>
               <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=jill-lupupa' target='_blank'>
                 <Card className={styles.StaffCard}>
                   <FaDesktop className={styles.iconStaff} />
-                  <img src="/jill.png" alt='' className={styles.staffImage} />
-                  <h5>Jill Lupupa</h5>
-                  <p>Freelance Journalist Writer</p>
-                  <p>Interviewed renowned artists for tmrw Magazine.</p>
-                  <img src="/people.png" alt='' className={styles.workreel} />
+                  <img src="/damien.jpg" alt='' className={styles.staffImage} />
+                  <h5>Rodrigo Nogueira</h5>
+                  <p>Screenwriter, currently working on an animation for Disney</p>
                 </Card>
-                </a>
               </div>
               <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=jill-lupupa' target='_blank'>
-                <Card className={styles.StaffCard}>
-                  <FaDesktop className={styles.iconStaff} />
-                  <img src="/ashley.png" alt='' className={styles.staffImage} />
-                  <h5>Ashley Simpo</h5>
-                  <p>Freelance Journalist Writer</p>
-                  <p>Managed editorial teams at CRWNMAG and A Kids Co.</p>
-                  <img src="/crwnmag.jpg" alt='' className={styles.workreel} />
-                </Card>
-                </a>
-              </div>
-              <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=jill-lupupa' target='_blank'>
-                <Card className={styles.StaffCard}>
-                  <FaDesktop className={styles.iconStaff} />
-                  <img src="/simon.png" alt='' className={styles.staffImage} />
-                  <h5>Simon Watts</h5>
-                  <p>Sports Broadcaster & Documentary Maker.</p>
-                  <p>Produced "Out of Contract" for Sky Sport.</p>
-                  <img src="/sky.png" alt='' className={styles.workreel} />
-                </Card>
-                </a>
-              </div>
-              <div>
-                <a href='https://www.qreating.io/coach-profile-page?user_id=jill-lupupa' target='_blank'>
-                <Card className={styles.StaffCard}>
-                  <FaDesktop className={styles.iconStaff} />
-                  <img src="/kenzie.png" alt='' className={styles.staffImage} />
-                  <h5>Mackenzie Munro</h5>
-                  <p>Director, Writer, Producer</p>
-                  <p>Currently finishing post-production on the Rom Com </p>
-                  <img src="/cannes.png" alt='' className={styles.workreel} />
-                </Card>
-                </a>
-              </div>
-              <div>
-                <a href='https://www.qreating.io/discover-coaches?' target="_blank" rel="noopener noreferrer">
                 <Card className={styles.StaffCard}>
                   <img src="/users.png" alt='' className={styles.staffImage} />
                   <h5>VIEW ALL </h5>
                   <p></p>
                 </Card>
-                </a>
-
-                
               </div>
-       
-              
             </Slider>
-            {/* <br/>
-            <br/>
-            <div className="marquee">
-        <img src="lala.png" alt="Logo 1"/>
-        <img src="lala.png" alt="Logo 2"/>
-        <img src="lala.png" alt="Logo 3"/>
-        <img src="logo4.png" alt="Logo 4"/>
-        <img src="logo5.png" alt="Logo 5"/>
-        <img src="logo6.png" alt="Logo 6"/>
-        <img src="logo7.png" alt="Logo 7"/>
-        <img src="logo8.png" alt="Logo 8"/>
-    </div> */}
           </Container>
-          
         </section>
-   
-
-
-        
         <section className={styles.videoSection}>
           <Container>
             <center><h1 style={{ fontWeight: 800 }}>Qreating in 28 seconds...</h1></center>
@@ -287,7 +206,7 @@ export default function Home() {
             <br />
             <br />
             <Row>
-              <Col xs={12} sm={4}>
+              <Col xs={12} sm={12} md={12} lg={4}>
                 <Link href="https://qreating.notion.site/Blog-a4692fdb359b488ea01a13586c9d2a63"><Card className={styles.blogPost}>
                   <Row>
                     <Col xs={5} lg={5} className={styles.blogImage} style={{
@@ -302,7 +221,7 @@ export default function Home() {
                   </Row>
                 </Card></Link>
               </Col>
-              <Col xs={12} sm={4}>
+              <Col xs={12} sm={12} md={12} lg={4}>
                 <Link href="https://qreating.notion.site/Blog-a4692fdb359b488ea01a13586c9d2a63"><Card className={styles.blogPost}>
                   <Row>
                     <Col xs={5} lg={5} className={styles.blogImage} style={{
@@ -318,7 +237,7 @@ export default function Home() {
                 </Card>
                 </Link>
               </Col>
-              <Col xs={12} sm={4}>
+              <Col xs={12} sm={12} md={12} lg={4}>
                 <Link href="https://qreating.notion.site/Blog-a4692fdb359b488ea01a13586c9d2a63"><Card className={styles.blogPost}>
                   <Row>
                     <Col xs={5} lg={5} className={styles.blogImage} style={{
@@ -353,7 +272,7 @@ export default function Home() {
               </Col>
               <Col>
                 <div className={styles.halftwo}>
-                  <h5>Shape the future of creativity</h5>
+                  <h5>Be part of a group of visionaries, shape the future of creativity</h5>
                   <br />
                   <h2>Join our exclusive coaching community</h2>
                   <br />
@@ -370,7 +289,7 @@ export default function Home() {
           <br />
           <br />
           <Container>
-            <Accordion defaultActiveKey="">
+            <Accordion defaultActiveKey="0">
               <Row style={{ alignItems: "start" }}>
                 <Col xs={12} sm={6} >
                   <Accordion.Item eventKey="0">
@@ -404,39 +323,9 @@ export default function Home() {
             </Accordion>
           </Container>
         </section>
-
-        <section className={styles.footer}>
-          <Container>
-            <Row>
-              <Col className={styles.mobileCenter} xs={12} sm={6}>
-                <img className={`${styles.logo}`} src="/white.png" />
-                <p style={{ color: "white" }} >Unlocking Creativity, One Door At A Time</p>
-              </Col>
-              <Col className={styles.mobileCenter} xs={12} sm={6} style={{ textAlign: "right" }}>
-                <Link href="https://twitter.com/qreating"><FaTwitter className={styles.footerSocialIcons} /></Link>
-                <Link href="https://www.instagram.com/qreatingio/?igshid=ZDdkNTZiNTM%3D"><FaInstagram className={styles.footerSocialIcons} /></Link>
-                <Link href="https://www.linkedin.com/company/qreating/"><FaLinkedinIn className={styles.footerSocialIcons} /></Link>
-                <Link href="https://www.youtube.com/watch?v=7PJ5QP30_n0"><FaYoutube className={styles.footerSocialIcons} /></Link>
-              </Col>
-            </Row>
-            <br />
-            <br />
-            <hr style={{ color: "white" }} />
-            <br />
-            <Row>
-              <Col className={styles.mobileCenter} xs={12} sm={6}>
-                <p style={{ color: 'white' }}>Copyright ©2023 Qreating.io</p>
-              </Col>
-              <Col className={styles.mobileCenter} xs={12} sm={6} style={{ textAlign: "right" }}>
-                <Link className='footer-links' href="https://qreating.notion.site/Blog-a4692fdb359b488ea01a13586c9d2a63?pvs=4">Blog</Link>
-                <Link className='footer-links' href="https://qreating.notion.site/qreating/Qreating-s-Privacy-Policy-d386366d727644c1a1a1a51953010167">Privacy</Link>
-                <Link className='footer-links' href="https://qreating.notion.site/Qreating-s-Terms-of-Service-70618bcf331e43539db4256cf73b6ee4">Terms</Link>
-              </Col>
-            </Row>
-          </Container>
-        </section>
-
       </main>
     </>
   )
 }
+
+export default Layout(Home);
